@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OEE Data</title>
+</head>
+<body>
+    <h1>Overall Equipment Effectiveness (OEE) Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Machine Name</th>
+                <th>OEE</th>
+                <th>Availability</th>
+                <th>Performance</th>
+                <th>Quality</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.machine }}</td>
+                <td>{{ result.oee }}</td>
+                <td>{{ result.availability }}</td>
+                <td>{{ result.performance }}</td>
+                <td>{{ result.quality }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
